@@ -11,6 +11,10 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+
 
 call plug#end()
 
@@ -89,7 +93,7 @@ nnoremap <silent> <C-n> :set relativenumber!<cr>
 
 " nerdtree keybinds
 nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <silent> <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
@@ -107,3 +111,5 @@ let g:lightline = { 'colorscheme': 'palenight'}
 let g:airline_theme = "palenight"
 
 lua require("init")
+
+
