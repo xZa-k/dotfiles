@@ -16,7 +16,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-
+Plug 'pangloss/vim-javascript'      "Javascript support
+Plug 'HerringtonDarkholme/yats.vim' "Typescript and TSX support
+Plug 'maxmellon/vim-jsx-pretty'     "JSX support
+Plug 'jparise/vim-graphql'          "GraphQL support
 call plug#end()
 
 " Line numbers
@@ -117,4 +120,4 @@ let g:airline_theme = "palenight"
 
 lua require("init")
 
-
+let g:javascript_plugin_jsdoc = 1   "JavaDoc support
