@@ -13,8 +13,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
@@ -99,6 +100,10 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
+
+" telescope keybinds
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <C-p> <cmd>Telescope git_files<CR>
 
 
 " Theme
