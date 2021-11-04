@@ -42,15 +42,14 @@ set autoindent
 set smartcase
 
 " Colors
-
-if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+if &term =~ '256color'
+    " Disable Background Color Erase (BCE) so that color schemes
+    " work properly when Vim is used inside tmux and GNU screen
+    set t_ut=
 endif
 
-if (has("termguicolors"))
-  set termguicolors
-endif
+set t_Co=256
+
 
 " Messes with textedit
 set hidden
@@ -111,7 +110,7 @@ nnoremap <C-p> <cmd>Telescope git_files<CR>
 
 " Theme
 
-set background=dark
+" set background=dark
 colorscheme palenight
 
 " ########## Plugin Config ##########
